@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form>
+            <fieldset> 
+                <legend>Login Details</legend>              
+                <label for="uname">Username</label>
+                <input type="text" name="uname" id="uname" placeholder="Username">
+            
+            <div>
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" id="pwd" placeholder="Password" required>    
+            </div>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="date" name="dob" id="dob">
+            </div>
+            <div>
+                <label for="yoe">Years of Experience</label>
+                <input type="range" min="1" max="20" id="yoe" name="yoe" value="1" oninput="this.nextElementSibling.value = this.value">
+                <output>1</output>
+            </div>
+            <div>
+                <label for="fav_car">Favorite Car</label>
+                <input list="cars" id="fav_car" name="fav_car">
+                <datalist id="cars">
+                    <option value="Hybrid"></option>
+                    <option value="Gas"></option>
+                    <option value="None"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="how_find">How did you find out about this position</label>
+                <input list="hows" name="how_find" id="how_find">
+                <datalist id="hows">
+                    <option value="Google Search"></option>
+                    <option value="Direct Search"></option>
+                    <option value="Recommendation"></option>
+                    <option value="Career Center"></option>
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset>
+                <h1>In 500 to 750 words, explain why you believe you are good fit for the company.</h1>
+                <div>
+                    <textarea col="6000000" rows="40" name="essay" id="essay" maxlength="700" minlength="400" placeholder="type here"></textarea>
+                </div>
+        </fieldset>
+            <button type="submit">Log in</button>
+        </form>
+    </main>
+</body>
+</html>
